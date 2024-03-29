@@ -1,0 +1,639 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Clasificación de objetos &#8212; Microscopy for Beginners reference guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LDZ3MLCB50"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LDZ3MLCB50');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03_Image_analysis/Classification';</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Software de código abierto" href="Software.html" />
+    <link rel="prev" title="Seguimiento de objetos" href="Tracking.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Microscopy for Beginners reference guide - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Microscopy for Beginners reference guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Bienvenido
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../QuantitativeBioimaging.html">Bioimagenología Cuantitativa</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sample Preparation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_Sample_preparation/Introduction.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_Sample_preparation/Experimental_design.html">Decisiones de diseño experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_Sample_preparation/Considerations.html">Consideraciones para diferentes tipos de muestras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_Sample_preparation/Reproducibility.html">Reproducibilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_Sample_preparation/Resources.html">Recursos para aprender más</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sample Acquisition</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Introduction.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Picking.html">Elegir la modalidad de microscopía adecuada</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Practical_considerations.html">Consideraciones prácticas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Resources.html">Recursos para aprender más</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Image Analysis and Data Handling</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introducción</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Common_types_of_analysis.html">Tipos comunes de análisis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Shape.html">Medidas de tamaño y forma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Intensity.html">Medidas de intensidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Colocalization.html">Colocalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tracking.html">Seguimiento de objetos</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Clasificación de objetos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Software.html">Software de código abierto</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="GeneralUseSoftware.html">Uso general de software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpecificUseSoftware.html">Software de uso específico</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Data_management.html">Gestión y uso compartido de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Recursos para aprender más</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Interpretation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04_Data_presentation/Introduction.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Data_presentation/Presentation_images.html">Presentación de imágenes de microscopía</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Data_presentation/Statistics.html">Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Data_presentation/Resources.html">Recursos para aprender más</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../community_resources.html">Recursos para la comunidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contribuir a esta guía</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glosario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliografía</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Índice</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/broadinstitute/MicroscopyForBeginnersReferenceGuide" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Repositorio de origen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/broadinstitute/MicroscopyForBeginnersReferenceGuide/edit/main/03_Image_analysis/Classification.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/broadinstitute/MicroscopyForBeginnersReferenceGuide/issues/new?title=Issue%20on%20page%20%2F03_Image_analysis/Classification.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Abrir un problema"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/03_Image_analysis/Classification.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Clasificación de objetos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-classification">¿Qué es la clasificación?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="object-classification">
+<h1>Clasificación de objetos<a class="headerlink" href="#object-classification" title="Permalink to this heading">#</a></h1>
+<section id="what-is-classification">
+<h2>¿Qué es la clasificación?<a class="headerlink" href="#what-is-classification" title="Permalink to this heading">#</a></h2>
+<p>En pocas palabras, la clasificación fenotípica se trata de categorizar objetos en diferentes grupos según sus características (también conocidas como medidas).</p>
+<br>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+📏 ¿Cómo lo mido?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">La clasificación fenotípica se puede realizar de diferentes maneras. Una forma de desglosar esto es mediante la clasificación no supervisada frente a la supervisada.</p>
+<p class="sd-card-text">En la <strong>clasificación supervisada</strong>, un ser humano también brinda información sobre cómo deberían verse los diferentes grupos de objetos al proporcionar ejemplos representativos de cada grupo en un conjunto de datos de entrenamiento. Luego, la computadora aprende cómo asignar objetos a grupos, en función de sus medidas al probar modelos contra el conjunto de datos de entrenamiento de verdad del terreno.</p>
+<ul class="simple">
+<li><p class="sd-card-text">Por ejemplo, podría clasificar células según un fenotipo visual y entrenar un clasificador de aprendizaje automático para derivar qué rangos de medición están asociados con diferentes clases. Esta es una clasificación supervisada porque una persona proporciona instrucciones sobre cuántas clases debe haber y ejemplos de cómo debe verse cada clase para que la computadora aprenda. Un ejemplo de esto podría ser anotar un subconjunto de células que se encuentran en diferentes etapas de la mitosis y entrenar un clasificador para usar sus etiquetas para encontrar otras células en esas etapas.</p></li>
+</ul>
+<p class="sd-card-text">En la <strong>clasificación no supervisada</strong>, los objetos se agrupan en función de sus medidas, pero sin ninguna guía de arriba hacia abajo definida por humanos sobre cuántos grupos hay o cómo deberían ser los grupos.</p>
+<ul class="simple">
+<li><p class="sd-card-text">Por ejemplo, podría medir cientos o miles de características de las células de muchos tratamientos, como es habitual en los experimentos de perfilado de células a gran escala. A continuación, puede dejar que la computadora agrupe las células en una cierta cantidad de grupos diferentes en función de tener medidas similares. Esta es una forma de agrupamiento no supervisado, donde observa qué grupos emergen de una computadora considerando solo sus medidas, y no las etiquetas de clase que imponemos como investigadores. Estos tipos de experimentos de agrupamiento pueden proporcionar resultados novedosos, pero también pueden ser más difíciles de interpretar. Consulte este protocolo<span id="id1"><sup><a class="reference internal" href="../bibliography.html#id105" title="Fernanda Garcia-Fossa, Mario Costa Cruz, Marzieh Haghighi, Marcelo Bispo de Jesus, Shantanu Singh, Anne E. Carpenter, and Beth A. Cimini. Interpreting image-based profiles using similarity clustering and single-cell visualization. Current Protocols, 3(3):e713, 2023. URL: https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/cpz1.713, doi:https://doi.org/10.1002/cpz1.713.">21</a></sup></span> para obtener más información.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span style="color: red"> ⚠️ </span> ¿Dónde pueden salir mal las cosas?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Las medidas válidas siguen siendo importantes</strong> La clasificación puede ser simple o compleja, pero los resultados siempre dependen de la validez de sus medidas. Por esta razón, todas las advertencias de las secciones de medición anteriores también se aplican aquí.</p></li>
+<li><p class="sd-card-text"><strong>Las máquinas son perezosas</strong> Los clasificadores de aprendizaje automático no necesariamente van a aprender las características biológicamente relevantes que distinguen objetos de distintos grupos. Las características confusas, o características que varían con su fenotipo pero que no están biológicamente relacionadas con él, pueden limitar la utilidad de su clasificador y llevar a conclusiones incorrectas. Por ejemplo, si los médicos a menudo colocan reglas al lado de los lunares malignos y no al lado de los lunares benignos y tratan de entrenar un clasificador de aprendizaje automático para distinguir entre malignos y benignos, el modelo podría aprender a clasificar imágenes con reglas como malignos sin aprovechar ninguna de los las características relevantes de los lunares. Este es un <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/30244720/">ejemplo real</a> <span id="id2"><sup><a class="reference internal" href="../bibliography.html#id84" title="Akhila Narla, Brett Kuprel, Kavita Sarin, Roberto Novoa, and Justin Ko. Automated classification of skin lesions: from pixels to practice. J. Invest. Dermatol., 138(10):2108–2110, October 2018.">22</a></sup></span>. Si es posible, examinar en qué características se basa su modelo para clasificar objetos puede ser una forma de verificar esto. También es importante estandarizar la forma en que captura imágenes de sus diferentes clases de objetos e incluir un conjunto de entrenamiento lo suficientemente grande con imágenes con mucha variación. No querrá que todas sus células positivas provengan de muestras que tomó en imágenes en marzo y todas sus células negativas de muestras que tomó en imágenes en enero, por ejemplo.</p></li>
+<li><p class="sd-card-text"><strong>Violación de suposiciones del modelo</strong> Si usa un clasificador de aprendizaje automático, los diferentes modelos vienen con diferentes suposiciones integradas. Si está empezando, puede ser difícil saber cuál elegir. Hay herramientas interactivas como <a class="reference external" href="https://academic.oup.com/bioinformatics/article/32/20/3210/2196630">CellProfiler Analyst</a> <span id="id3"><sup><a class="reference internal" href="../bibliography.html#id86" title="David R Stirling, Anne E Carpenter, and Beth A Cimini. CellProfiler analyst 3.0: accessible data exploration and machine learning for image analysis. Bioinformatics, 37(21):3992–3994, September 2021.">23</a></sup></span> y <a class="reference external" href="https://www.piximi.app/">Piximi</a> que facilitan el entrenamiento de un clasificador, especialmente si no sabe programar.</p></li>
+<li><p class="sd-card-text"><strong>Límites desordenados</strong> La mayoría de los métodos de clasificación supervisada, en los que el usuario asigna objetos a una puntuación o a un contenedor, en última instancia tratan cada contenedor como una entidad totalmente separada; la biología rara vez es tan ordenada. Por ejemplo, un clasificador supervisado para la fase del ciclo celular debe asignar una célula a una fase, pero, de hecho, la progresión a través del ciclo celular no es un proceso parecido a un interruptor perfecto, como se puede visualizar mediante mediciones de células individuales (coloreadas por su clase dada por un observador humano). Es posible que se necesiten métodos más sofisticados para clasificar fenotipos más continuos.</p></li>
+</ul>
+<figure class="align-center" id="cell-cycle-class-dist">
+<a class="reference internal image-reference" href="../_images/discrete_classes.png"><img alt="una distribución continua de los estados del ciclo celular" src="../_images/discrete_classes.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figura 7 </span><span class="caption-text"><strong>La división estricta en clases supervisadas puede ser complicada para los procesos biológicos continuos</strong>. Adaptado de Eulenberg, P., Köhler, N., Blasi, T. <em>et al</em>. Reconstruir el ciclo celular y la progresión de la enfermedad mediante el aprendizaje profundo. <em>Nat Commun</em> <strong>8</strong>, 463 (2017) <span id="id4"><sup><a class="reference internal" href="../bibliography.html#id87" title="Philipp Eulenberg, Niklas Köhler, Thomas Blasi, Andrew Filby, Anne E Carpenter, Paul Rees, Fabian J Theis, and F Alexander Wolf. Reconstructing cell cycle and disease progression using deep learning. Nat. Commun., 8(1):463, September 2017.">24</a></sup></span></span><a class="headerlink" href="#cell-cycle-class-dist" title="Enlace permanente a esta imagen">#</a></p>
+</figcaption>
+</figure>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+📚🤷‍♀️ ¿Dónde puedo obtener más información?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">📄 <a class="reference external" href="https://www.nature.com/articles/nmeth.4397">Estrategias de análisis de datos para perfiles celulares basados en imágenes</a> <span id="id5"><sup><a class="reference internal" href="../bibliography.html#id33" title="Juan C Caicedo, Sam Cooper, Florian Heigwer, Scott Warchal, Peng Qiu, Csaba Molnar, Aliaksei S Vasilevich, Joseph D Barry, Harmanjit Singh Bansal, Oren Kraus, Mathias Wawer, Lassi Paavolainen, Markus D Herrmann, Mohammad Rohban, Jane Hung, Holger Hennig, John Concannon, Ian Smith, Paul A Clemons, Shantanu Singh, Paul Rees, Peter Horvath, Roger G Linington, and Anne E Carpenter. Data-analysis strategies for image-based cell profiling. Nat. Methods, 14(9):849–863, August 2017.">25</a></sup></span></p></li>
+<li><p class="sd-card-text">📄 <a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.0808843106">Puntaje de diversas morfologías celulares en pantallas basadas en imágenes con retroalimentación iterativa y aprendizaje automático</a> <span id="id6"><sup><a class="reference internal" href="../bibliography.html#id88" title="Thouis R Jones, Anne E Carpenter, Michael R Lamprecht, Jason Moffat, Serena J Silver, Jennifer K Grenier, Adam B Castoreno, Ulrike S Eggert, David E Root, Polina Golland, and David M Sabatini. Scoring diverse cellular morphologies in image-based screens with iterative feedback and machine learning. Proc. Natl. Acad. Sci. U. S. A., 106(6):1826–1831, February 2009.">26</a></sup></span></p></li>
+<li><p class="sd-card-text">🎥 <a class="reference external" href="https://www.youtube.com/watch?v=Odi9pIerT7I">Serie de videos de iBiology: Medición y clasificación de fenotipos</a></p></li>
+<li><p class="sd-card-text">📄 <a class="reference external" href="https://doi.org/10.1002/cpz1.713">Interpretación de perfiles basados en imágenes usando agrupamiento de similitud y visualización de células únicas</a> <span id="id7"><sup><a class="reference internal" href="../bibliography.html#id105" title="Fernanda Garcia-Fossa, Mario Costa Cruz, Marzieh Haghighi, Marcelo Bispo de Jesus, Shantanu Singh, Anne E. Carpenter, and Beth A. Cimini. Interpreting image-based profiles using similarity clustering and single-cell visualization. Current Protocols, 3(3):e713, 2023. URL: https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/cpz1.713, doi:https://doi.org/10.1002/cpz1.713.">21</a></sup></span></p></li>
+</ul>
+</div>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./03_Image_analysis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tracking.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Seguimiento de objetos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Software.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Software de código abierto</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-classification">¿Qué es la clasificación?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://www.bioimagingguide.org">English</a> <a href="https://cs.bioimagingguide.org">česky</a> <a href="https://pt.bioimagingguide.org">português</a> <a href="https://es.bioimagingguide.org">español</a>
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
